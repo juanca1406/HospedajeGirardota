@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeGirardotaApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A99E498-3121-426E-B1F0-16CAF0D8DDB2}|HospedajeGirardotaApi\\HospedajeGirardotaApi.csproj|c:\\users\\user\\documents\\hospedajegirardota\\hospedajegirardotaapi\\hospedajegirardotaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A99E498-3121-426E-B1F0-16CAF0D8DDB2}|HospedajeGirardotaApi\\HospedajeGirardotaApi.csproj|solutionrelative:hospedajegirardotaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A99E498-3121-426E-B1F0-16CAF0D8DDB2}|HospedajeGirardotaApi\\HospedajeGirardotaApi.csproj|c:\\users\\user\\documents\\hospedajegirardota\\hospedajegirardotaapi\\hospedajegirardotaapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{1A99E498-3121-426E-B1F0-16CAF0D8DDB2}|HospedajeGirardotaApi\\HospedajeGirardotaApi.csproj|solutionrelative:hospedajegirardotaapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A99E498-3121-426E-B1F0-16CAF0D8DDB2}|HospedajeGirardotaApi\\HospedajeGirardotaApi.csproj|c:\\users\\user\\documents\\hospedajegirardota\\hospedajegirardotaapi\\hospedajegirardotaapi\\hospedajegirardotaapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{1A99E498-3121-426E-B1F0-16CAF0D8DDB2}|HospedajeGirardotaApi\\HospedajeGirardotaApi.csproj|solutionrelative:hospedajegirardotaapi\\hospedajegirardotaapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,37 +27,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeGirardotaApi\\HospedajeGirardotaApi\\Program.cs",
-              "RelativeDocumentMoniker": "HospedajeGirardotaApi\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeGirardotaApi\\HospedajeGirardotaApi\\Program.cs",
-              "RelativeToolTip": "HospedajeGirardotaApi\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAC0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T00:35:54.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HospedajeGirardotaApi.http",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeGirardotaApi\\HospedajeGirardotaApi\\HospedajeGirardotaApi.http",
-              "RelativeDocumentMoniker": "HospedajeGirardotaApi\\HospedajeGirardotaApi.http",
-              "ToolTip": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeGirardotaApi\\HospedajeGirardotaApi\\HospedajeGirardotaApi.http",
-              "RelativeToolTip": "HospedajeGirardotaApi\\HospedajeGirardotaApi.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-05-16T00:35:30.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeGirardotaApi\\HospedajeGirardotaApi\\Dockerfile",
               "RelativeDocumentMoniker": "HospedajeGirardotaApi\\Dockerfile",
               "ToolTip": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeGirardotaApi\\HospedajeGirardotaApi\\Dockerfile",
               "RelativeToolTip": "HospedajeGirardotaApi\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-04-30T02:00:16.088Z",
               "EditorCaption": ""
