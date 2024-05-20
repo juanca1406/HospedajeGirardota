@@ -6,11 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-string connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") ?? string.Empty;
 
+// Obtener la cadena de conexión desde las variables de entorno o el archivo de configuración
+string connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING")
+                          ?? builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -21,8 +23,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("Cors", app =>
     {
         app.AllowAnyOrigin()
-        .AllowAnyHeader()
-        .AllowAnyMethod();
+           .AllowAnyHeader()
+           .AllowAnyMethod();
     });
 });
 
@@ -36,14 +38,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseCors("Cors");
-
 app.UseAuthorization();
 
 app.MapControllers();
-
-app.UseSwagger();
-app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API"));
 
 app.Run();
