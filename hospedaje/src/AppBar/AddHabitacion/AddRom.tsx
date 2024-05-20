@@ -28,18 +28,18 @@ function AddRom() {
     const [count, setCount] = React.useState(1);
 
     return (
-        <Box sx={{ marginTop: "60px", display: 'inline-flex', justifyContent: 'space-between', p: 2 }}>
+        <Box sx={{ marginTop: "60px", display: 'inline-flex', justifyContent: 'space-between', p: 2, justifyItems: "center" }}>
             <Box sx={{ flex: 1, marginRight: '10px' }}>
                 <Menu />
                 <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', p: 2, textAlign: "center" }}>
                     <DialogTitle >Añadir Habitación </DialogTitle>
                     <Divider />
-                    <Box sx={{ display: 'flex', flexDirection: 'column', paddingRight: '10px', marginTop: "20px", marginBottom: "15px" }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', marginTop: "20px", marginBottom: "15px" }}>
                         <InputLabel id="demo-simple-select-label">Nombre de la habitación: </InputLabel>
                         <TextField id="outlined-basic" variant="outlined" sx={{ width: "100%" }} />
                     </Box>
-                    <Box sx={{ marginTop: "2%", paddingRight: '10px' }}>
-                        <Box sx={{ display: 'flex', flexDirection: 'row', marginBottom: "15px" }}>
+                    <Box sx={{ marginTop: "2%", marginBottom: "15px" }}>
+                        <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                             <Box sx={{ flex: 1 }}>
                                 <InputLabel id="demo-simple-select-label">Descripción: </InputLabel>
                                 <TextField id="outlined-basic" variant="outlined" sx={{ width: "100%" }} />
@@ -47,10 +47,10 @@ function AddRom() {
                         </Box>
                     </Box>
                     <Box sx={{ flex: 1, marginBottom: "15px" }} >
-                        <InputLabel id="demo-simple-select-label" sx={{ p: 2 }}>Categoria:</InputLabel>
+                        <InputLabel id="demo-simple-select-label" >Categoria:</InputLabel>
                         <AutocompleteCargo />
                     </Box>
-                    <Box sx={{ marginTop: "2%", paddingRight: '10px' }}>
+                    <Box sx={{ marginTop: "2%", marginBottom: "15px" }}>
                         <InputLabel id="demo-simple-select-label">Números de personas</InputLabel>
                         <ButtonGroup>
                             <Button
@@ -73,6 +73,21 @@ function AddRom() {
                                 <AddIcon fontSize="small" />
                             </Button>
                         </ButtonGroup>
+                    </Box>
+                    <Box sx={{ justifyContent: "center", marginBottom: "5px" }}>
+                        <InputLabel id="demo-simple-select-label" >Precio</InputLabel>
+                        <TextField id="outlined-basic" label="" type='number' variant="outlined" sx={{ width: "100%" }} />
+                    </Box>
+
+                </Box>
+                <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", p: 2 }}>
+                    <Box>
+                        <Button variant="contained" autoFocus >
+                            Cancelar
+                        </Button>
+                    </Box>
+                    <Box sx={{ marginLeft: "10px" }}>
+                        <Button variant="contained" >Guardar</Button>
                     </Box>
                 </Box>
             </Box>

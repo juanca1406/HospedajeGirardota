@@ -245,27 +245,27 @@ export default function Tarifas() {
 
     const isSelected = (id: number) => selected.indexOf(id) !== -1;
 
-    const emptyRows =
-        page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
-
-    const visibleRows = React.useMemo(
-        () =>
-            stableSort(rows, getComparator(order, orderBy)).slice(
-                page * rowsPerPage,
-                page * rowsPerPage + rowsPerPage,
-            ),
-        [order, orderBy, page, rowsPerPage],
-    );
+    const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - hospedaje.length) : 0;
 
     useEffect(() => {
-        (async () => await Load())();
+        (async () => await loadData())();
     }, []);
 
-    async function Load() {
-        const result = await axios.get("https://localhost:32770/api/Hospedaje/");
-        setHospedaje(result.data);
-        console.log(result.data);
-    }
+    const loadData = async () => {
+        try {
+            const result = await axios.get("https://localhost:7107/api/Hospedajes/Habitacion/");
+            console.log(result.data); // Para verificar los datos recibidos
+            if (Array.isArray(result.data.response)) {
+                setHospedaje(result.data.response);
+            } else {
+                console.error('Los datos recibidos no son un array', result.data);
+                setHospedaje([]);
+            }
+        } catch (error) {
+            console.error('Error al obtener los datos', error);
+            setHospedaje([]);
+        }
+    };
 
     return (
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
@@ -292,7 +292,7 @@ export default function Tarifas() {
                                 orderBy={orderBy}
                                 onSelectAllClick={handleSelectAllClick}
                                 onRequestSort={handleRequestSort}
-                                rowCount={rows.length}
+                                rowCount={hospedaje.length}
                             />
                             <TableBody>
                                 {hospedaje.map((row, index) => {
@@ -319,7 +319,8 @@ export default function Tarifas() {
                                                     }}
                                                 />
                                             </TableCell>
-                                            <TableCell component="th" id={labelId} scope="row" padding="none"> {row.id}
+                                            <TableCell component="th" id={labelId} scope="row" padding="none">
+                                                {row.id}
                                             </TableCell>
                                             <TableCell align="right">{row.id}</TableCell>
                                             <TableCell align="right">{row.habitacion}</TableCell>
