@@ -1,10 +1,9 @@
 #See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
 WORKDIR /app
 EXPOSE 80
-ENV DB_CONNECTION_STRING="Server=192.168.1.4,1433;Database=Hospedaje;User Id=soporte;Password=soporte1406;TrustServerCertificate=True;"
+#ENV DB_CONNECTION_STRING="Server=192.168.1.4,1433;Database=Hospedaje;User Id=soporte;Password=soporte1406;TrustServerCertificate=True;"
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HospedajeGirardotaApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0055707bec581d426fcfd8012c3497a7d7774a5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21636167b7a6373b7ed742ff1f08c3d067de7347")]
 [assembly: System.Reflection.AssemblyProductAttribute("HospedajeGirardotaApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HospedajeGirardotaApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
