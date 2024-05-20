@@ -1,0 +1,6 @@
+@HospedajeGirardotaApi_HostAddress = http://localhost:5193
+
+GET {{HospedajeGirardotaApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
