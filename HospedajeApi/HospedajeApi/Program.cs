@@ -4,19 +4,23 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Configure the host to use environment variables
+builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
+{
+    config.AddEnvironmentVariables(prefix: "ConnectionStrings__");
+});
 
+// Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<HospedajeContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("cadenaSql")));
+builder.Services.AddDbContext<HospedajeContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("cadenaSql")));
 
 builder.Services.AddControllers().AddJsonOptions(opt =>
 {
     opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-
 });
 
 var misReglasCors = "ReglasCors";
@@ -26,9 +30,7 @@ builder.Services.AddCors(opt =>
     {
         builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
     });
-
 });
-
 
 var app = builder.Build();
 
