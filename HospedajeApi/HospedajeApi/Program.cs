@@ -1,49 +1,43 @@
 using Microsoft.EntityFrameworkCore;
-using HospedajeApi.Models;
-using System.Text.Json.Serialization;
+using WebApiPerson.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure the host to use environment variables
-builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
-{
-    config.AddEnvironmentVariables(prefix: "ConnectionStrings__");
-});
-
 // Add services to the container.
+
+var connectionString = builder.Configuration.GetConnectionString("Connection");
+
+builder.Services.AddDbContext<AppDbContext>(
+    options => options.UseSqlServer(connectionString)
+);
+
 builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<HospedajeContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("cadenaSql")));
-
-builder.Services.AddControllers().AddJsonOptions(opt =>
+builder.Services.AddCors(options =>
 {
-    opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-});
-
-var misReglasCors = "ReglasCors";
-builder.Services.AddCors(opt =>
-{
-    opt.AddPolicy(name: misReglasCors, builder =>
+    options.AddPolicy("Cors", app =>
     {
-        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        app.AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod();
     });
 });
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API"));
+    app.UseSwaggerUI();
 }
 
-app.UseCors(misReglasCors);
-
 app.UseHttpsRedirection();
+
+app.UseCors("Cors");
 
 app.UseAuthorization();
 

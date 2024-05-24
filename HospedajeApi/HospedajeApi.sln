@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospedajeApi", "HospedajeApi\HospedajeApi.csproj", "{9392FB93-CB24-4621-A24E-00D46BD3D97F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospedajeApi", "HospedajeApi\HospedajeApi.csproj", "{B312A9EA-027B-4CF9-BCF0-44FA024A4256}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9392FB93-CB24-4621-A24E-00D46BD3D97F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9392FB93-CB24-4621-A24E-00D46BD3D97F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9392FB93-CB24-4621-A24E-00D46BD3D97F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9392FB93-CB24-4621-A24E-00D46BD3D97F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B312A9EA-027B-4CF9-BCF0-44FA024A4256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B312A9EA-027B-4CF9-BCF0-44FA024A4256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B312A9EA-027B-4CF9-BCF0-44FA024A4256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B312A9EA-027B-4CF9-BCF0-44FA024A4256}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5B5BFDBF-1A87-4653-AB43-538148B6071C}
+		SolutionGuid = {9DFDA4E5-BA6E-4E06-81F6-FF8BD82D1D09}
 	EndGlobalSection
 EndGlobal

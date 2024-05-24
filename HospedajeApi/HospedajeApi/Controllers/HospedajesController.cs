@@ -1,62 +1,108 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HospedajeApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Cors;
+using WebApiPerson.Context;
 
-namespace HospedajeGirardotaApi.Controllers
+namespace HospedajeApi.Controllers
 {
-    [EnableCors("ReglasCors")]
     [Route("api/[controller]")]
     [ApiController]
     public class HospedajesController : ControllerBase
     {
-        private readonly HospedajeContext _dbContext;
+        private readonly AppDbContext _context;
 
-        public HospedajesController(HospedajeContext context)
+        public HospedajesController(AppDbContext context)
         {
-            _dbContext = context;
+            _context = context;
         }
 
+        // GET: api/Hospedajes
         [HttpGet]
-        [Route("Habitacion")]
-        public IActionResult Lista()
+        public async Task<ActionResult<IEnumerable<Hospedaje>>> GetHospedaje()
         {
-            try
-            {
-                List<Habitaciones> habitacion = _dbContext.Habitaciones.ToList();
-                return Ok(new { mensaje = "ok", response = habitacion });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new { mensaje = ex.Message });
-            }
+            return await _context.Hospedaje.ToListAsync();
         }
 
-        [HttpGet]
-        [Route("Obtener/{IdRegistrar:int}")]
-        public IActionResult Obtener(int IdRegistrar)
+        // GET: api/Hospedajes/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Hospedaje>> GetHospedaje(int id)
         {
+            var hospedaje = await _context.Hospedaje.FindAsync(id);
+
+            if (hospedaje == null)
+            {
+                return NotFound();
+            }
+
+            return hospedaje;
+        }
+
+        // PUT: api/Hospedajes/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutHospedaje(int id, Hospedaje hospedaje)
+        {
+            if (id != hospedaje.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(hospedaje).State = EntityState.Modified;
+
             try
             {
-                Habitaciones habitacion = _dbContext.Habitaciones.FirstOrDefault(p => p.Id == IdRegistrar);
-
-                if (habitacion == null)
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!HospedajeExists(id))
                 {
-                    return NotFound(new { mensaje = "Habitación no encontrada" });
+                    return NotFound();
                 }
+                else
+                {
+                    throw;
+                }
+            }
 
-                return Ok(new { mensaje = "ok", response = habitacion });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new { mensaje = ex.Message });
-            }
+            return NoContent();
         }
 
+        // POST: api/Hospedajes
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost]
+        public async Task<ActionResult<Hospedaje>> PostHospedaje(Hospedaje hospedaje)
+        {
+            _context.Hospedaje.Add(hospedaje);
+            await _context.SaveChangesAsync();
 
+            return CreatedAtAction("GetHospedaje", new { id = hospedaje.Id }, hospedaje);
+        }
+
+        // DELETE: api/Hospedajes/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteHospedaje(int id)
+        {
+            var hospedaje = await _context.Hospedaje.FindAsync(id);
+            if (hospedaje == null)
+            {
+                return NotFound();
+            }
+
+            _context.Hospedaje.Remove(hospedaje);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        private bool HospedajeExists(int id)
+        {
+            return _context.Hospedaje.Any(e => e.Id == id);
+        }
     }
 }
