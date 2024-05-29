@@ -1,26 +1,24 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
+# Etapa base para el runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 80
 ENV ConnectionStrings__cadenaSql="Server=192.168.1.4,1433;Database=Hospedaje;User Id=soporte;Password=soporte1406;TrustServerCertificate=True;"
 
+# Etapa para construir la aplicación .NET
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["HospedajeApi/HospedajeApi.csproj", "HospedajeApi/"]
-RUN dotnet restore "./HospedajeApi/HospedajeApi.csproj"
+COPY ["HospedajeGirardotaApi/HospedajeGirardotaApi.csproj", "HospedajeGirardotaApi/"]
+RUN dotnet restore "HospedajeGirardotaApi/HospedajeGirardotaApi.csproj"
 COPY . .
-WORKDIR "/src/HospedajeApi"
-RUN dotnet build "./HospedajeApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/HospedajeGirardotaApi"
+RUN dotnet build "HospedajeGirardotaApi.csproj" -c Release -o /app/build
 
+# Etapa para publicar la aplicación .NET
 FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./HospedajeApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "HospedajeGirardotaApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
+# Etapa final para el runtime
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "HospedajeApi.dll"]
+ENTRYPOINT ["dotnet", "HospedajeGirardotaApi.dll"]

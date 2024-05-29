@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-var connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__cadenaSql")?? builder.Configuration.GetConnectionString("Connection");
+var connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__cadenaSql") ?? builder.Configuration.GetConnectionString("Connection");
 
 builder.Services.AddDbContext<AppDbContext>(
     options => options.UseSqlServer(connectionString)

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B312A9EA-027B-4CF9-BCF0-44FA024A4256}|HospedajeApi\\HospedajeApi.csproj|c:\\users\\user\\documents\\hospedajegirardota\\hospedajeapi\\hospedajeapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B312A9EA-027B-4CF9-BCF0-44FA024A4256}|HospedajeApi\\HospedajeApi.csproj|solutionrelative:hospedajeapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B312A9EA-027B-4CF9-BCF0-44FA024A4256}|HospedajeApi\\HospedajeApi.csproj|c:\\users\\user\\documents\\hospedajegirardota\\hospedajeapi\\hospedajeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B312A9EA-027B-4CF9-BCF0-44FA024A4256}|HospedajeApi\\HospedajeApi.csproj|solutionrelative:hospedajeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B312A9EA-027B-4CF9-BCF0-44FA024A4256}|HospedajeApi\\HospedajeApi.csproj|c:\\users\\user\\documents\\hospedajegirardota\\hospedajeapi\\hospedajeapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B312A9EA-027B-4CF9-BCF0-44FA024A4256}|HospedajeApi\\HospedajeApi.csproj|solutionrelative:hospedajeapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B312A9EA-027B-4CF9-BCF0-44FA024A4256}|HospedajeApi\\HospedajeApi.csproj|c:\\users\\user\\documents\\hospedajegirardota\\hospedajeapi\\hospedajeapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{B312A9EA-027B-4CF9-BCF0-44FA024A4256}|HospedajeApi\\HospedajeApi.csproj|solutionrelative:hospedajeapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B312A9EA-027B-4CF9-BCF0-44FA024A4256}|HospedajeApi\\HospedajeApi.csproj|c:\\users\\user\\documents\\hospedajegirardota\\hospedajeapi\\hospedajeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B312A9EA-027B-4CF9-BCF0-44FA024A4256}|HospedajeApi\\HospedajeApi.csproj|solutionrelative:hospedajeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +22,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\HospedajeApi\\Dockerfile",
+              "RelativeDocumentMoniker": "HospedajeApi\\Dockerfile",
+              "ToolTip": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\HospedajeApi\\Dockerfile",
+              "RelativeToolTip": "HospedajeApi\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-24T14:28:46.641Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -34,41 +48,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\HospedajeApi\\appsettings.json",
-              "RelativeDocumentMoniker": "HospedajeApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\HospedajeApi\\appsettings.json",
-              "RelativeToolTip": "HospedajeApi\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-24T14:30:29.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\HospedajeApi\\Dockerfile",
-              "RelativeDocumentMoniker": "HospedajeApi\\Dockerfile",
-              "ToolTip": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\HospedajeApi\\Dockerfile",
-              "RelativeToolTip": "HospedajeApi\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-24T14:28:46.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\HospedajeApi\\Program.cs",
               "RelativeDocumentMoniker": "HospedajeApi\\Program.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\HospedajeApi\\Program.cs",
               "RelativeToolTip": "HospedajeApi\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAACOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T14:07:01.959Z",
+              "WhenOpened": "2024-05-25T01:53:01.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\HospedajeApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "HospedajeApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\user\\Documents\\HospedajeGirardota\\HospedajeApi\\HospedajeApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "HospedajeApi\\Properties\\launchSettings.json",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACMAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-25T01:36:36.939Z",
               "EditorCaption": ""
             }
           ]
