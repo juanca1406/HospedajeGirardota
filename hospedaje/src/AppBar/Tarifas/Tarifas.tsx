@@ -14,9 +14,8 @@ import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
 import { visuallyHidden } from '@mui/utils';
 import Menu from '../Menu';
-import { Button, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import ConfirmacionTarifas from './AddTarifas';
-import { fetchUsers } from '../../Api/Hospedaje';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -253,10 +252,10 @@ export default function Tarifas() {
 
     const loadData = async () => {
         try {
-            const result = await axios.get("https://localhost:7107/api/Hospedajes/Habitacion/");
+            const result = await axios.get("https://localhost:32769/api/Hospedajes/");
             console.log(result.data); // Para verificar los datos recibidos
-            if (Array.isArray(result.data.response)) {
-                setHospedaje(result.data.response);
+            if (Array.isArray(result.data)) {
+                setHospedaje(result.data);
             } else {
                 console.error('Los datos recibidos no son un array', result.data);
                 setHospedaje([]);
