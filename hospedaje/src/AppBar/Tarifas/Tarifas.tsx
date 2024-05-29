@@ -246,25 +246,6 @@ export default function Tarifas() {
 
     const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - hospedaje.length) : 0;
 
-    useEffect(() => {
-        (async () => await loadData())();
-    }, []);
-
-    const loadData = async () => {
-        try {
-            const result = await axios.get("https://localhost:32769/api/Hospedajes/");
-            console.log(result.data); // Para verificar los datos recibidos
-            if (Array.isArray(result.data)) {
-                setHospedaje(result.data);
-            } else {
-                console.error('Los datos recibidos no son un array', result.data);
-                setHospedaje([]);
-            }
-        } catch (error) {
-            console.error('Error al obtener los datos', error);
-            setHospedaje([]);
-        }
-    };
 
     return (
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HospedajeApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a68cd4af0e086134e842dea672e54bfa09f451f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9da573ec8a56d9d10acbceee2711e1d2a03449ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("HospedajeApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HospedajeApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
