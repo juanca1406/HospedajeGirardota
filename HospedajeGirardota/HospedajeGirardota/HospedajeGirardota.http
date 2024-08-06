@@ -1,0 +1,6 @@
+@HospedajeGirardota_HostAddress = http://localhost:5298
+
+GET {{HospedajeGirardota_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

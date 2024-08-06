@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYbG6WpNQ2kqYPHSIq2kjRQAAAAACAAAAAAAQZgAAAAEAACAAAAD8MOA4XlFVe780CE+tT57RY6BQdqzwnvfeUmObVlpgCQAAAAAOgAAAAAIAACAAAAAwxVRwcTgwU0OLBg4CHyogmee2DAWzXhrlWImiyfN98SAAAACsqNpzUFkjl3BUzS3ipkABwly+hhI+ouFXfTIFrySA1EAAAAC0a9Lpu9RcrRApu8X8ih1A53LRaxjWZr71zLzf832e+Ex5uZ6WFaDP/Xj8r5t0t5B86Dswqwwamv7bM6sQiUPE</EncryptedPassword>
+    <History>False|2024-08-06T00:05:03.8620724Z||;False|2024-08-05T19:04:39.4287478-05:00||;False|2024-08-05T19:03:52.9638863-05:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Data Source=hospedajedb.database.windows.net,1433;Initial Catalog=HospedajeDb;User ID=admin14;Password=Manada14" />
+    <AzureDBConnectionStrings Include="REDACTED" />
+  </ItemGroup>
+</Project>
